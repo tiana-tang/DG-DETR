@@ -1,0 +1,33 @@
+{% extends 'admin/login.html' %}
+<!--
+    重写页面文档
+    https://github.com/newpanjing/simpleui/blob/master/QUICK.md#%E9%87%8D%E5%86%99%E9%A1%B5%E9%9D%A2
+-->
+
+
+{% block header %}
+<div class="header">{{ site_header }}</div>
+<el-alert title="账号注册" type="success" :show-icon="false">
+    <div slot="title">
+        <div>欢迎使用奶山羊图像实例分割系统！</div>
+        <div>
+            <el-link type="primary"
+                @click="window.open('https://github.com/newpanjing/simpleui_demo')">点此进行账号注册</el-link>
+        </div>
+    </div>
+</el-alert>
+{% endblock %}
+
+
+{% block particles %}
+{{ block.super }}
+<!-- 重写login页面的block 添加自己的脚本 -->
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        if (loginApp) {
+            loginApp.username = 'admin';
+            loginApp.password = '11235813';
+        }
+    });
+</script>
+{% endblock %}
