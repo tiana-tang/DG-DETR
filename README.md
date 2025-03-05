@@ -143,9 +143,10 @@ python tools/test.py configs/your_model_config.py work_dirs/best.pth --eval bbox
 
 ## 📝 **论文引用**
 ```bibtex
-@article{your_paper_citation,
-  title = {Dairy Goat Instance Segmentation System},
-  author = {Your Name et al.},
+@article{Bai2025enhanced,
+  title = {Enhanced Dairy Goat Instance Segmentation via Multi-Scale
+Deformable Transformer},
+  author = {Zihan Bai, Jinglei Tang, Xue Zhang, Hao Rong, Xianglong Pei and Yawei Ding},
   journal = {The Visual Computer},
   year = {2025},
   doi = {Your DOI}
