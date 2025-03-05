@@ -10,10 +10,9 @@
 - [🛠️ Environment Setup](#-environment-setup)
   - [Installing MMDetection](#installing-mmdetection)
   - [Installing Django and Dependencies](#installing-django-and-dependencies)
-- [📎 Dataset Download](#-dataset-download)
-- [🚀 Usage Instructions](#-usage-instructions)
   - [Starting the Web Server](#starting-the-web-server)
-  - [Model Training and Inference](#model-training-and-inference)
+- [📎 Dataset Download](#-dataset-download)
+- [🚀 Model Training and Inference](#-model-training-and-inference)
 - [📝 Citation](#-citation)
 - [📞 Contact](#-contact)
 
@@ -76,8 +75,6 @@ Then install **MMDetection**:
 cd mmdetection
 pip install -r requirements/build.txt
 pip install -v -e .
-# "-v" enables verbose output
-# "-e" installs in editable mode, so local modifications are applied without reinstallation.
 ```
 
 ---
@@ -98,16 +95,6 @@ python manage.py createsuperuser
 
 ---
 
-## 📎 **Dataset Download**
-This project uses a **COCO format dataset** for training, available in the `Instance Segmentation` folder on GitHub.
-The folder includes training, validation, and test sets.
-📎 **[GitHub Dataset Link](https://github.com/tiana-tang/DiaryGoatMVT.git)**  
-
-📄 **For a detailed dataset description, refer to the `README.md` inside the `Instance Segmentation` folder.**
-
----
-
-## 🚀 **Usage Instructions**
 ### **🔹 Starting the Web Server**
 ```shell
 cd segmentation_system
@@ -123,15 +110,24 @@ http://127.0.0.1:8080/admin/
 
 ---
 
-### **🔹 Model Training and Inference**
-#### **1️⃣ Train the Model**
+## 📎 **Dataset Download**
+This project uses a **COCO format dataset** for training, available in the `Instance Segmentation` folder on GitHub.
+The folder includes training, validation, and test sets.
+📎 **[GitHub Dataset Link](https://github.com/tiana-tang/DiaryGoatMVT.git)**  
+
+📄 **For a detailed dataset description, refer to the `README.md` inside the `Instance Segmentation` folder.**
+
+---
+
+## 🚀 **Model Training and Inference**
+### **🔹 Training the Model**
 If you want to **retrain** the dairy goat segmentation model:
 ```shell
 cd mmdetection
 python tools/train.py configs/your_model_config.py
 ```
 
-#### **2️⃣ Run Inference**
+### **🔹 Running Inference**
 If you already have a trained model `best.pth`, run inference as follows:
 ```shell
 cd mmdetection
@@ -151,7 +147,7 @@ Deformable Transformer},
   author = {Zihan Bai, Jinglei Tang, Xue Zhang, Hao Rong, Xianglong Pei and Yawei Ding},
   journal = {The Visual Computer},
   year = {2025},
-  doi = {Your DOI}
+  doi = {DOI}
 }
 ```
 
